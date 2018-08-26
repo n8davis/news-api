@@ -1,0 +1,28 @@
+{
+  "name": "n8davis/news-api",
+  "description": "Basic wrapper for News API",
+  "homepage": "http://github.com/GinoPane/composer-package-template",
+  "keywords": [
+    "news api",
+    "api",
+    "news",
+    "github",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nate Davis",
+      "email": "n8davis@me.com"
+    }
+  ],
+  "type": "project",
+  "require": {
+    "php": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "News\\": "src/"
+    }
+  }
+}
