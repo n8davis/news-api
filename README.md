@@ -11,8 +11,8 @@ $sources = $news->get_sources([
 
 #### Get Everything 
 ```
-$news    = new News( 'YOUR_NEWS_API_KEY' ); 
-$sources = $news->get_everything([ 
+$news       = new News( 'YOUR_NEWS_API_KEY' ); 
+$everything = $news->get_everything([ 
     'q'        => 'bitcoin',
     'sources'  => 'bbc-news,the-verge',
     'domains'  => 'bbc.co.uk,techcrunch.com',
@@ -27,8 +27,8 @@ $sources = $news->get_everything([
 
 #### Get Top Headlines
 ```
-$news    = new News( 'YOUR_NEWS_API_KEY' ); 
-$sources = $news->get_top_headlines([ 
+$news         = new News( 'YOUR_NEWS_API_KEY' ); 
+$topHeadlines = $news->get_top_headlines([ 
     'q'        => 'bitcoin',
     'sources'  => 'bbc-news,the-verge',
     'category' => 'business',
