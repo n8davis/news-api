@@ -33,6 +33,8 @@ class News
 
     protected $error;
     protected $key ;
+    protected $status ;
+    protected $totalResults ;
 
     /**
      * News constructor.
@@ -81,6 +83,8 @@ class News
         }
 
         $articles = [];
+        if( property_exists( $response , 'status' ) ) $this->setStatus( $response->status );
+        if( property_exists( $response , 'totalResults' ) ) $this->setStatus( $response->totalResults );
         if( property_exists( $response , 'articles' ) ){
             foreach( $response->articles as $article ){
                 $headline = new Headline();
@@ -132,6 +136,8 @@ class News
         }
 
         $articles = [];
+        if( property_exists( $response , 'status' ) ) $this->setStatus( $response->status );
+        if( property_exists( $response , 'totalResults' ) ) $this->setStatus( $response->totalResults );
         if( property_exists( $response , 'articles' ) ){
             foreach( $response->articles as $article ){
                 $everything = new Everything();
@@ -183,6 +189,8 @@ class News
         }
 
         $sources = [];
+        if( property_exists( $response , 'status' ) ) $this->setStatus( $response->status );
+        if( property_exists( $response , 'totalResults' ) ) $this->setStatus( $response->totalResults );
         if( property_exists( $response , 'sources' ) ) {
 
             foreach ($response->sources as $value) {
@@ -215,6 +223,42 @@ class News
     public function setError( Error $error)
     {
         $this->error = $error;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     * @return News
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTotalResults()
+    {
+        return $this->totalResults;
+    }
+
+    /**
+     * @param mixed $totalResults
+     * @return News
+     */
+    public function setTotalResults($totalResults)
+    {
+        $this->totalResults = $totalResults;
         return $this;
     }
 
