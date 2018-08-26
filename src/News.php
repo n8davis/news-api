@@ -55,7 +55,7 @@ class News
 
     /**
      * @param array $data
-     * @return array|bool|mixed
+     * @return Headline[]|array|bool|mixed
      */
     public function get_top_headlines( array $data )
     {
@@ -109,7 +109,7 @@ class News
 
     /**
      * @param array $data
-     * @return array|bool|mixed
+     * @return Everything[]|array|bool|mixed
      */
     public function get_everything( array $data )
     {
@@ -161,7 +161,7 @@ class News
 
     /**
      * @param array $data
-     * @return array|bool|mixed
+     * @return Source[]|array|bool|mixed
      */
     public function get_sources( array $data )
     {
