@@ -7,9 +7,9 @@
  */
 
 namespace News\Test;
+use PHPUnit\Framework\TestCase;
 
-
-class APITest
+class APITest extends TestCase
 {
 
 }
