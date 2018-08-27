@@ -1,5 +1,13 @@
 ## Simple News API Wrapper
 
+https://packagist.org/packages/n8davis/news-api
+
+
+#### Installation
+```
+composer create-project n8davis/news-api
+```
+
 #### Get Sources
 ```
 $news    = new News( 'YOUR_NEWS_API_KEY' ); 
